@@ -90,7 +90,7 @@ function viewDetails(city: string): void {
 </script>
 
 <style>
-@import "~leaflet/dist/leaflet.css";
+@import "leaflet/dist/leaflet.css";
 
 * {
   margin: 0;
