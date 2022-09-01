@@ -19,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+import "leaflet/dist/leaflet.css";
 import { reactive } from "vue";
 
 interface City {
