@@ -1,8 +1,13 @@
-import { LMap, LTileLayer, LMarker, LTooltip, LCircle, LIcon } from '@vue-leaflet/vue-leaflet';
+import { LMap, LTileLayer, LMarker, LTooltip, LCircle } from '@vue-leaflet/vue-leaflet';
+import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// this part resolve an issue where the markers would not appear
-delete LIcon.Default.prototype._getIconUrl;
+delete Icon.Default.prototype._getIconUrl;
+Icon.Default.mergeOptions({
+	iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+	iconUrl: require('leaflet/dist/images/marker-icon.png'),
+	shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+});
 
 export default defineNuxtPlugin((nuxtApp) => {
 	nuxtApp.vueApp.component('LMap', LMap);
