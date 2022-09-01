@@ -1,5 +1,5 @@
-import { LMap, LTileLayer, LMarker, LTooltip, LCircle } from '@vue-leaflet/vue-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { LMap, LTileLayer, LMarker, LTooltip, LCircle } from '@vue-leaflet/vue-leaflet';
 
 export default defineNuxtPlugin((nuxtApp) => {
 	nuxtApp.vueApp.component('LMap', LMap);
